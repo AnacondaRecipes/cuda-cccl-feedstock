@@ -46,8 +46,8 @@ outputs:
         - {{ pin_compatible("cuda-version", max_pin="x.x") }}
         - cuda-cccl_{{ target_platform }} =={{ version }}
         - cccl =={{ cccl_version }}
-      # run_constrained:
-      #   - arm-variant * {{ arm_variant_type }}  # [aarch64]
+      run_constrained:
+        - arm-variant * {{ arm_variant_type }}  # [aarch64]
     test:
       requires:
         - cmake  # [linux]
@@ -85,8 +85,8 @@ outputs:
         - cuda-version {{ cuda_version }}
       run:
         - {{ pin_compatible("cuda-version", max_pin="x.x") }}
-      # run_constrained:
-      #   - arm-variant * {{ arm_variant_type }}  # [aarch64]
+      run_constrained:
+        - arm-variant * {{ arm_variant_type }}  # [aarch64]
     test:
       commands:
         - test -d $PREFIX/targets/{{ target_name }}/lib      # [linux]
