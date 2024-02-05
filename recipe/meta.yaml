@@ -37,6 +37,8 @@ test:
   commands:
     - test -d $PREFIX/lib/cmake                      # [linux]
     - test -d $PREFIX/targets/{{ target_name }}/lib  # [linux]
+    - if not exist %LIBRARY_LIB%\{{ target_name }}\cmake exit 1    # [win]
+    - if not exist %LIBRARY_INC%\targets\{{ target_name }} exit 1  # [win]
 
 outputs:
   - name: cuda-cccl
