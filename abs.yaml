@@ -1,0 +1,4 @@
+# without this, only the linux-64 noarch package will be uploaded
+# (the noarch packages contain the libraries)
+noarch_upload:
+  - all
