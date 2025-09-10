@@ -3,8 +3,8 @@ build_env_vars:
   ANACONDA_ROCKET_GLIBC: '2.28'
 
 # (the noarch packages contain the libraries)
-noarch_upload:
-  - linux-64
+# noarch_upload:
+#   - linux-64
 
 staging_channel_upload_target: cuda128-test
 channels:
