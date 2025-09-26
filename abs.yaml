@@ -1,3 +1,0 @@
-staging_channel_upload_target: cudatest
-channels:
-- https://staging.continuum.io/pbp/cudatest
