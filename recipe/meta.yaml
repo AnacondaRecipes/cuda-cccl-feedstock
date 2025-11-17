@@ -67,6 +67,7 @@ outputs:
       description: |
         CUDA C++ Core Libraries
       doc_url: https://docs.nvidia.com/cuda/index.html
+      dev_url: https://docs.nvidia.com/cuda/index.html
 
   - name: cuda-cccl_{{ target_platform }}
     build:
@@ -98,6 +99,7 @@ outputs:
       description: |
         CUDA C++ Core Libraries
       doc_url: https://docs.nvidia.com/cuda/index.html
+      dev_url: https://docs.nvidia.com/cuda/index.html
 
 about:
   home: https://developer.nvidia.com/cuda-toolkit
@@ -108,7 +110,10 @@ about:
   description: |
     CUDA C++ Core Libraries
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
+  skip-lints:
+    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
