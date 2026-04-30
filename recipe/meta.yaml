@@ -63,6 +63,7 @@ outputs:
       license_file: LICENSE
       license: LicenseRef-NVIDIA-End-User-License-Agreement
       license_url: https://docs.nvidia.com/cuda/eula/index.html
+      license_family: Other
       summary: 'CUDA C++ Core Libraries'
       description: |
         CUDA C++ Core Libraries
@@ -95,6 +96,7 @@ outputs:
       license_file: LICENSE
       license: LicenseRef-NVIDIA-End-User-License-Agreement
       license_url: https://docs.nvidia.com/cuda/eula/index.html
+      license_family: Other
       summary: 'CUDA C++ Core Libraries'
       description: |
         CUDA C++ Core Libraries
@@ -106,6 +108,7 @@ about:
   license_file: LICENSE
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: 'CUDA C++ Core Libraries'
   description: |
     CUDA C++ Core Libraries
@@ -113,7 +116,5 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
-  skip-lints:
-    - license_file_overspecified
   recipe-maintainers:
     - conda-forge/cuda
