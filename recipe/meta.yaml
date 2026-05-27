@@ -1,5 +1,5 @@
 {% set name = "cuda-cccl" %}
-{% set version = "13.3.0" %}
+{% set version = "13.3.3.3.1" %}
 {% set cccl_version = "3.3.3" %}
 {% set cuda_version = "13.3" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
@@ -25,7 +25,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://developer.download.nvidia.com/compute/cuda/redist/cccl/{{ platform }}/cuda_cccl-{{ platform }}-{{ version }}-archive.{{ extension }}
+  url: https://developer.download.nvidia.com/compute/cuda/redist/cccl/{{ platform }}/cccl-{{ platform }}-{{ version }}-archive.{{ extension }}
   sha256: 67746da12f16229ac4ebde78ce7895e42b069d1d3e2ae2d2d25f90bc43679d68  # [linux64]
   sha256: 37e9024c5e24a9e9d1618c4fb7b36e74a0a68fac91d589867676952204ecde5b  # [aarch64 and arm_variant_type=="sbsa"]
   #sha256: 296248ed702ea9e1a5e43c367d7a09a9ce2fda8a8c21101c428ea79eecf1a46c  # [aarch64 and arm_variant_type=="tegra"]
