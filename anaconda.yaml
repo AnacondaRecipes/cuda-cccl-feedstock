@@ -3,3 +3,8 @@ upstream_sources:
   - webpage:
       url: https://api.anaconda.org/package/conda-forge/cuda-cccl
       regex: '"version":\s*"([^"]+)"'
+    packages:
+      - cuda-cccl
+      - cuda-cccl_linux-64
+      - cuda-cccl_linux-aarch64
+      - cuda-cccl_win-64
