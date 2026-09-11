@@ -8,3 +8,4 @@ upstream_sources:
       - cuda-cccl_linux-64
       - cuda-cccl_linux-aarch64
       - cuda-cccl_win-64
+      - cuda-cccl_win-arm64

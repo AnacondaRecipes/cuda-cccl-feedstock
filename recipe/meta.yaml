@@ -78,7 +78,7 @@ outputs:
         - if not exist %LIBRARY_INC%\targets\{{ target_name }} exit 1  # [win]
         # Extract the CCCL version from the cuda_cccl archive, and compare to the
         # version of the cccl conda package.
-        - '[[ "$(cmake -DCCCL_VERSION_FILE="$PREFIX/targets/{{ target_name }}/lib/cmake/cccl/cccl-config-version.cmake" -P verify-version.cmake)" == "{{ cccl_version }}" ]] || exit 1'  # [linux]
+        - test "$(cmake -DCCCL_VERSION_FILE=$PREFIX/targets/{{ target_name }}/lib/cmake/cccl/cccl-config-version.cmake -P verify-version.cmake)" = "{{ cccl_version }}"  # [linux]
     about:
       home: https://developer.nvidia.com/cuda-toolkit
       license_file: LICENSE
@@ -137,5 +137,7 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
+  skip-lints:
+    - deprecate_license_url
   recipe-maintainers:
     - conda-forge/cuda
