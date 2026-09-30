@@ -43,7 +43,7 @@ source:
   sha256: {{ sha256 }}  # [linux64 or (aarch64 and arm_variant_type=="sbsa") or win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx]
 
 outputs:
@@ -56,8 +56,7 @@ outputs:
       run:
         - {{ pin_compatible("cuda-version", max_pin="x.x") }}
         - cuda-cccl_{{ target_platform }} =={{ version }}
-        # TODO: Rebuild when CCCL 3.4.3 released (https://github.com/NVIDIA/cccl/releases)
-        #- cccl =={{ cccl_version }}
+        - cccl =={{ cccl_version }}
         - arm-variant * {{ arm_variant_type }}  # [aarch64]
     test:
       requires:
