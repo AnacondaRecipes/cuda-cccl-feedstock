@@ -9,3 +9,15 @@ upstream_sources:
       - cuda-cccl_linux-aarch64
       - cuda-cccl_win-64
       - cuda-cccl_win-arm64
+  # https://github.com/conda-forge/cuda-cccl-feedstock/tree/13.2
+  - webpage:
+      url: https://api.anaconda.org/package/conda-forge/cuda-cccl
+      regex: '"version":\s*"(13\.2(?:\.\d+)*)"'
+    feedstock_branch: '13.2'
+    version_matchspec: '>=13.2,<13.3'
+    supported: true
+    packages:
+      - cuda-cccl
+      - cuda-cccl_linux-64
+      - cuda-cccl_linux-aarch64
+      - cuda-cccl_win-64
