@@ -41,9 +41,15 @@ source:
   # conda-build rejects -- breaking `conda smithy rerender` even though no such
   # config is ever built.
   sha256: {{ sha256 }}  # [linux64 or (aarch64 and arm_variant_type=="sbsa") or win]
+  patches:
+    # CCCL CMake config searches for headers at
+    # ../../../include{,/cccl} (Linux layout),
+    # but win uses Library/include/targets/ARCH
+    - fix-header-search-x64.patch  # [win64]
+    - fix-header-search-arm64.patch  # [win and arm64]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [osx or ppc64le]
 
 outputs:
